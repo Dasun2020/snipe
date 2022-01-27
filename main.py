@@ -5,7 +5,7 @@ import os
 import random
 
 global snipemessages
-snipemessages = ["your mother died, kid plays roblox at funeral, instantly regrets", "i played roblox at my moms funeral, gets 60000000000 bobux, no virus, clean, heoroione birne called, allah missed call, run, asshole. tich", "No anime support the motherland", "I couldn't think of a good snipe comment, so here", "amoung us sus sniped you OMG", "a trash panda sniped you", "creeper snipe. aw man", "The gay-man aka @j.#2383 sniped you", "wasted", "imagine getting sniped couldn't be me", "snipe", "kid gets sniped, the ending will shock you", "ur mother sniped you", "I have sniped this idiot"]
+snipemessages = ["your mother died, kid plays roblox at funeral, instantly regrets", "i played roblox at my moms funeral, gets 60000000000 bobux, no virus, clean, heoroione birne called, allah missed call, run, asshole. tich", "No anime support the motherland", "I couldn't think of a good snipe comment, so here", "amoung us sus sniped you OMG", "a trash panda sniped you", "creeper snipe. aw man", "The gay-man aka @j.#2383 sniped you", "wasted", "imagine getting sniped couldn't be me", "snipe", "kid gets sniped, the ending will shock you", "ur mother sniped you", "I have sniped this idiot", "      ", "This message has been sniped by joe bidome", "you sniped yourself", "L"]
 
 keep_alive.keep_alive()
 
@@ -66,7 +66,7 @@ async def changebotnick(ctx, nick):
   await ctx.send(f"Changed nickname to {nick} in {ctx.message.guild.name}")
 '''
 
-@client.command(brief="A command to recover the last deleted message")
+@client.command(brief="A command to recover the last deleted message", aliases=["s"])
 async def snipe(ctx):
     channel = ctx.channel 
     temp = random.choice(snipemessages)
@@ -81,7 +81,7 @@ async def snipe(ctx):
 async def about(ctx):
   await ctx.send(f"snipe bot is a bot made by @{ctx.owner} because snipe is offline XD. Thanks to @j.#2383 for debugging help and help with the custom messages!")
 
-@client.command(brief="A command to recover the last edited message")
+@client.command(brief="A command to recover the last edited message", aliases=["e"])
 async def esnipe(ctx):
     channel = ctx.channel
     temp = random.choice(snipemessages)
