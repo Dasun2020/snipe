@@ -43,7 +43,7 @@ async def on_message_edit(message_before, message_after):
 async def ping(ctx):
   await ctx.send(f'Pong! In {(client.latency * 1000)}ms')
 
-@client.command(brief="a command for the owner of this bot to delete the last snipe XD")
+@client.command(brief="a command for the owner of this bot to delete the last snipe XD", aliases=["d"])
 @commands.is_owner()
 async def delsnipe(ctx):
   global snipe_message_author
